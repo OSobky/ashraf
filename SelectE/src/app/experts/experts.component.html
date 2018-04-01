@@ -1,0 +1,14 @@
+<div class = "container" *ngFor="let expert of experts; let i = index" >
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{experts[i].username}}</h5>
+      <p class="card-text">{{ experts[i].topics[0].topicTitle + " " +experts[i].topics[0].topicDescription }}</p>
+      <a class="btn btn-primary" (click)="test(expert)">Select</a>
+    </div>
+  </div>
+</div>
+
+<span *ngIf="f">Reached Limit</span>
+
+<!-- <input type="text" name ="test" [(ngModel)] = "name">
+<p>{{ name }}</p>  -->
